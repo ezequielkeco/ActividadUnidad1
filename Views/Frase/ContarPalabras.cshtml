@@ -1,0 +1,13 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+    ViewData["Title"] = "Contador de Palabras";
+    var frase = ViewBag.Frase as string;
+    var cantidad = (int)ViewBag.Cantidad;
+}
+
+Al leer la frase: <em>"@frase"</em>, se puede determinar que contiene <strong>@cantidad</strong> palabra/s.

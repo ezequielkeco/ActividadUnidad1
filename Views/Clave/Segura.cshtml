@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+    ViewData["Title"] = "Verificar Contraseña Segura";
+    var clave = ViewBag.Clave as string;
+    var mensaje = ViewBag.Mensaje as string;
+    var esSegura = (bool)ViewBag.EsSegura;
+}
+
+Aplicación para determinar contraseñas seguras.<br/>
+
+@if (string.IsNullOrWhiteSpace(clave))
+{
+    <p>No se proporcionó ninguna contraseña.</p>
+}
+else
+{
+    <p>Contraseña ingresada: <strong>@clave</strong></p>
+    <p style="color:@(esSegura ? "green" : "red")">@mensaje</p>
+}

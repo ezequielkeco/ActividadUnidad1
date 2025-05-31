@@ -1,0 +1,15 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+    ViewData["Title"] = "Obtener Dominio de Correo";
+    var correo = ViewBag.Correo as string;
+    var dominio = ViewBag.Dominio as string;
+}
+
+Aplicación para obtener el dominio de un correo digitado.<br/>
+
+El correo <strong>@correo</strong> tiene el dominio: <strong>@dominio</strong>

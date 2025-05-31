@@ -1,0 +1,13 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+    ViewData["Title"] = "Resultado Palíndroma";
+    var palabra = ViewBag.Palabra as string;
+    var esPalindroma = (bool)ViewBag.EsPalindroma;
+}
+
+Al consultar la palabra <strong>@palabra</strong> @((esPalindroma ? "descubrimos que es" : "descubrimos que no es")) un palíndromo.
